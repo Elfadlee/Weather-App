@@ -2,7 +2,7 @@
 
 This project demonstrates a professional real-world setup** using React, Redux Toolkit, React-Redux, Material UI (MUI), Day.js, and i18next for internationalization.
 
----
+
 
  Features
 - Fetches real-time weather data from OpenWeather API
@@ -13,7 +13,7 @@ This project demonstrates a professional real-world setup** using React, Redux T
 - Material UI for modern responsive UI.
 - Error handling and loading states included.
 
----
+
 
 Installation
 
@@ -27,7 +27,6 @@ npm start
 npm install @reduxjs/toolkit react-redux axios dayjs i18next react-i18next @mui/material @mui/icons-material
 
 
----
 
 
 
@@ -85,9 +84,7 @@ const weatherSlice = createSlice({
 
 export const { changeResult } = weatherSlice.actions;
 export default weatherSlice.reducer;
-```
 
----
 
 2. Store (`store.js`)
 ```js
@@ -97,9 +94,7 @@ import weatherReducer from "./weatherAPOSlice";
 export const store = configureStore({
   reducer: { weather: weatherReducer },
 });
-```
 
----
 
 3. Provider (`index.js`)
 ```js
@@ -116,9 +111,7 @@ root.render(
     <App />
   </Provider>
 );
-```
 
----
 
 UI Component (`MainPage.js`)
 - Uses `useSelector` to read weather data.
@@ -179,9 +172,7 @@ export default function MainContainer() {
     </Container>
   );
 }
-```
 
----
 
 How it Works
 1. The app starts and `MainPage` dispatches `fetchDataWeather()`.
@@ -189,7 +180,7 @@ How it Works
 3. Once fulfilled, the weather data is stored in Redux and displayed.
 4. User can toggle English/Arabic, and both UI & date format update.
 
----
+
 
 Key Concepts
 - Redux Toolkit simplifies reducers and async logic.  
@@ -199,7 +190,6 @@ Key Concepts
 - i18next + dayjs handle internationalization and date localization.  
 - Material UI gives modern styled components.
 
----
 
 Next Steps
 - Add more cities (pass `city` to thunk).  
@@ -207,5 +197,5 @@ Next Steps
 - Add tests with Jest + React Testing Library.  
 - Deploy on Vercel/Netlify.
 
----
+Author Developed by*Najeh Elfadlee
 
